@@ -4,4 +4,7 @@ A iOS image editing tool.
 
 #### TODO
 
-- [ ] 正方形截图并且生成不同尺寸
+- [ ] Image information
+- [ ] Square crop and generate different sizes
+- [ ] Generate GIF with multiple images
+- [ ] Scale
