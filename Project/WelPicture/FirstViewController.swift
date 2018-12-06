@@ -39,11 +39,6 @@ class FirstViewController: UIViewController {
     func displayImage() -> Void {
         if let image = UIImage(named:"philipp-pilz-1201277-unsplash.jpg") {
             showView.image = image
-            print(image.size)
-            print(image.scale)
-            print(image.imageOrientation)
-            print(image.imageRendererFormat)
-            print(image.imageAsset)
             ImageInfo(image: image)
         }
     }
