@@ -8,3 +8,7 @@ A iOS image editing tool.
 - [ ] Square crop and generate different sizes
 - [ ] Generate GIF with multiple images
 - [ ] Scale
+
+#### Carthage
+
+`$ carthage update --platform iOS`
