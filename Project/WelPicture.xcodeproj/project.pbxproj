@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF66C24A21B8B4CF0014D802 /* philipp-pilz-1201277-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF66C24921B8B4CF0014D802 /* philipp-pilz-1201277-unsplash.jpg */; };
+		CF66C24C21B8C94B0014D802 /* ImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66C24B21B8C94B0014D802 /* ImageInfo.swift */; };
 		CFC6B31721B7D30A00181933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6B31621B7D30A00181933 /* AppDelegate.swift */; };
 		CFC6B31921B7D30A00181933 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6B31821B7D30A00181933 /* FirstViewController.swift */; };
 		CFC6B31B21B7D30A00181933 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6B31A21B7D30A00181933 /* SecondViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF66C24921B8B4CF0014D802 /* philipp-pilz-1201277-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "philipp-pilz-1201277-unsplash.jpg"; sourceTree = "<group>"; };
+		CF66C24B21B8C94B0014D802 /* ImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfo.swift; sourceTree = "<group>"; };
 		CFC6B31321B7D30A00181933 /* WelPicture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WelPicture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC6B31621B7D30A00181933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC6B31821B7D30A00181933 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF66C24821B8B44C0014D802 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CF66C24921B8B4CF0014D802 /* philipp-pilz-1201277-unsplash.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		CFC6B30A21B7D30A00181933 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +68,7 @@
 		CFC6B31521B7D30A00181933 /* WelPicture */ = {
 			isa = PBXGroup;
 			children = (
+				CF66C24821B8B44C0014D802 /* images */,
 				CFC6B31621B7D30A00181933 /* AppDelegate.swift */,
 				CFC6B31821B7D30A00181933 /* FirstViewController.swift */,
 				CFC6B31A21B7D30A00181933 /* SecondViewController.swift */,
@@ -63,6 +76,7 @@
 				CFC6B31F21B7D30B00181933 /* Assets.xcassets */,
 				CFC6B32121B7D30B00181933 /* LaunchScreen.storyboard */,
 				CFC6B32421B7D30B00181933 /* Info.plist */,
+				CF66C24B21B8C94B0014D802 /* ImageInfo.swift */,
 			);
 			path = WelPicture;
 			sourceTree = "<group>";
@@ -127,6 +141,7 @@
 			files = (
 				CFC6B32321B7D30B00181933 /* LaunchScreen.storyboard in Resources */,
 				CFC6B32021B7D30B00181933 /* Assets.xcassets in Resources */,
+				CF66C24A21B8B4CF0014D802 /* philipp-pilz-1201277-unsplash.jpg in Resources */,
 				CFC6B31E21B7D30A00181933 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFC6B31B21B7D30A00181933 /* SecondViewController.swift in Sources */,
+				CF66C24C21B8C94B0014D802 /* ImageInfo.swift in Sources */,
 				CFC6B31721B7D30A00181933 /* AppDelegate.swift in Sources */,
 				CFC6B31921B7D30A00181933 /* FirstViewController.swift in Sources */,
 			);
