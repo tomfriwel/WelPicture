@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 /* Begin PBXFileReference section */
 		CF66C24921B8B4CF0014D802 /* philipp-pilz-1201277-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "philipp-pilz-1201277-unsplash.jpg"; sourceTree = "<group>"; };
 		CF66C24B21B8C94B0014D802 /* ImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfo.swift; sourceTree = "<group>"; };
+		CFA192C521B8FB7E0011E05C /* PhotoCropEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotoCropEditor.framework; path = Carthage/Build/iOS/PhotoCropEditor.framework; sourceTree = "<group>"; };
 		CFC6B31321B7D30A00181933 /* WelPicture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WelPicture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC6B31621B7D30A00181933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC6B31821B7D30A00181933 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,11 +50,35 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		CFA192C421B8FB7E0011E05C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFA192C521B8FB7E0011E05C /* PhotoCropEditor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFA192D221B903030011E05C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF66C24B21B8C94B0014D802 /* ImageInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFA192D321B904630011E05C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		CFC6B30A21B7D30A00181933 = {
 			isa = PBXGroup;
 			children = (
 				CFC6B31521B7D30A00181933 /* WelPicture */,
 				CFC6B31421B7D30A00181933 /* Products */,
+				CFA192C421B8FB7E0011E05C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,7 +93,9 @@
 		CFC6B31521B7D30A00181933 /* WelPicture */ = {
 			isa = PBXGroup;
 			children = (
+				CFA192D321B904630011E05C /* Utils */,
 				CF66C24821B8B44C0014D802 /* images */,
+				CFA192D221B903030011E05C /* Model */,
 				CFC6B31621B7D30A00181933 /* AppDelegate.swift */,
 				CFC6B31821B7D30A00181933 /* FirstViewController.swift */,
 				CFC6B31A21B7D30A00181933 /* SecondViewController.swift */,
@@ -76,7 +103,6 @@
 				CFC6B31F21B7D30B00181933 /* Assets.xcassets */,
 				CFC6B32121B7D30B00181933 /* LaunchScreen.storyboard */,
 				CFC6B32421B7D30B00181933 /* Info.plist */,
-				CF66C24B21B8C94B0014D802 /* ImageInfo.swift */,
 			);
 			path = WelPicture;
 			sourceTree = "<group>";
@@ -91,6 +117,7 @@
 				CFC6B30F21B7D30A00181933 /* Sources */,
 				CFC6B31021B7D30A00181933 /* Frameworks */,
 				CFC6B31121B7D30A00181933 /* Resources */,
+				CFA192CC21B8FC1E0011E05C /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -147,6 +174,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CFA192CC21B8FC1E0011E05C /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/PhotoCropEditor.framework",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+				"",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PhotoCropEditor.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/Carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CFC6B30F21B7D30A00181933 /* Sources */ = {
@@ -304,6 +355,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5EW9858SB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WelPicture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -322,6 +377,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5EW9858SB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WelPicture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

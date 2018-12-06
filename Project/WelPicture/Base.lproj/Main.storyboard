@@ -18,11 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MS1-sw-Vnb">
-                                <rect key="frame" x="40" y="60" width="295" height="358"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MS1-sw-Vnb">
+                                <rect key="frame" x="20" y="40" width="335" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MS1-sw-Vnb" secondAttribute="height" multiplier="285:181" id="rTl-S1-eEN"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yV6-Y6-ArB">
-                                <rect key="frame" x="164.5" y="438" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="273" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="display:" destination="9pv-A4-QxB" eventType="touchUpInside" id="bMQ-85-ejp"/>
@@ -31,12 +34,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MS1-sw-Vnb" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="40" id="0dJ-eV-Gt0"/>
-                            <constraint firstItem="yV6-Y6-ArB" firstAttribute="top" secondItem="MS1-sw-Vnb" secondAttribute="bottom" constant="20" id="Atb-6b-IDR"/>
-                            <constraint firstItem="MS1-sw-Vnb" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="40" id="Cq4-Rl-2ep"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="MS1-sw-Vnb" secondAttribute="bottom" constant="200" id="WbB-2N-kyS"/>
+                            <constraint firstItem="yV6-Y6-ArB" firstAttribute="top" secondItem="MS1-sw-Vnb" secondAttribute="bottom" constant="20" id="Z3C-bq-laN"/>
+                            <constraint firstItem="MS1-sw-Vnb" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="e3z-io-2DE"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="MS1-sw-Vnb" secondAttribute="trailing" constant="20" id="k2U-eE-heI"/>
                             <constraint firstItem="yV6-Y6-ArB" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="sA5-ev-fzV"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="MS1-sw-Vnb" secondAttribute="trailing" constant="40" id="sbm-L2-8bX"/>
+                            <constraint firstItem="MS1-sw-Vnb" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="20" id="xge-X7-GVV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -47,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
