@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF58A53A21BFAD81004E9372 /* PathManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58A53921BFAD81004E9372 /* PathManager.swift */; };
 		CF66C24A21B8B4CF0014D802 /* philipp-pilz-1201277-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF66C24921B8B4CF0014D802 /* philipp-pilz-1201277-unsplash.jpg */; };
 		CF66C24C21B8C94B0014D802 /* ImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66C24B21B8C94B0014D802 /* ImageInfo.swift */; };
 		CFC6B31721B7D30A00181933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6B31621B7D30A00181933 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF58A53921BFAD81004E9372 /* PathManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathManager.swift; sourceTree = "<group>"; };
 		CF66C24921B8B4CF0014D802 /* philipp-pilz-1201277-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "philipp-pilz-1201277-unsplash.jpg"; sourceTree = "<group>"; };
 		CF66C24B21B8C94B0014D802 /* ImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfo.swift; sourceTree = "<group>"; };
 		CFA192C521B8FB7E0011E05C /* PhotoCropEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotoCropEditor.framework; path = Carthage/Build/iOS/PhotoCropEditor.framework; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				CFC6B31F21B7D30B00181933 /* Assets.xcassets */,
 				CFC6B32121B7D30B00181933 /* LaunchScreen.storyboard */,
 				CFC6B32421B7D30B00181933 /* Info.plist */,
+				CF58A53921BFAD81004E9372 /* PathManager.swift */,
 			);
 			path = WelPicture;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				CFC6B31B21B7D30A00181933 /* SecondViewController.swift in Sources */,
 				CF66C24C21B8C94B0014D802 /* ImageInfo.swift in Sources */,
 				CFC6B31721B7D30A00181933 /* AppDelegate.swift in Sources */,
+				CF58A53A21BFAD81004E9372 /* PathManager.swift in Sources */,
 				CFC6B31921B7D30A00181933 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

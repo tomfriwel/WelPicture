@@ -8,6 +8,7 @@
 
 import UIKit
 import PhotoCropEditor
+import ZipArchive
 
 class FirstViewController: UIViewController, CropViewControllerDelegate {
     
@@ -37,6 +38,8 @@ class FirstViewController: UIViewController, CropViewControllerDelegate {
         showView.layer.shadowOpacity = 0.25
         showView.layer.masksToBounds = false;
         showView.clipsToBounds = false;
+        // Create
+        SSZipArchive.createZipFile(atPath: "zipPath", withContentsOfDirectory: "sampleDataPath")
     }
     
     func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
@@ -50,9 +53,12 @@ class FirstViewController: UIViewController, CropViewControllerDelegate {
         UIGraphicsEndImageContext()
         
         return newImage
+//        let data = newImage.pngData()
+//
+//        return UIImage.init(data: data!)!
     }
     
-    func generateSquare(image:UIImage, sizes:Array<Int>) -> Array<UIImage> {
+    func generateSquare(image:UIImage, sizes:Array<CGFloat>) -> Array<UIImage> {
         var images:Array<UIImage> = []
         for size in sizes {
             print(size)
@@ -72,7 +78,6 @@ class FirstViewController: UIViewController, CropViewControllerDelegate {
             showView.image = image
             //            ImageInfo(image: image)
         }
-        print(getSizes())
     }
     
     func showCrop()->Void {
@@ -87,42 +92,42 @@ class FirstViewController: UIViewController, CropViewControllerDelegate {
     func getSizes() -> Array<CGFloat> {
         let appicon = [
             "iPhoneNotification":[
-                "original":20,
+                "original":20.0,
                 "x":[2, 3],
                 "title": "iPhone Notification"
             ],
             "iPhoneSetting":[
-                "original":29,
+                "original":29.0,
                 "x":[2, 3],
                 "title": "iPhone Setting"
             ],
             "iPhoneSpotlight":[
-                "original":40,
+                "original":40.0,
                 "x":[2, 3],
                 "title": "iPhone Spotlight"
             ],
             "iPhoneApp":[
-                "original":60,
+                "original":60.0,
                 "x":[2, 3],
                 "title": "iPhone App"
             ],
             "iPadNotifications":[
-                "original":20,
+                "original":20.0,
                 "x":[1, 2],
                 "title": "iPad Notifications"
             ],
             "iPadSettings":[
-                "original":29,
+                "original":29.0,
                 "x":[1, 2],
                 "title": "iPad Settings"
             ],
             "iPadSpotlight":[
-                "original":40,
+                "original":40.0,
                 "x":[1, 2],
                 "title": "iPad Spotlight"
             ],
             "iPadApp":[
-                "original":76,
+                "original":76.0,
                 "x":[1, 2],
                 "title": "iPad App"
             ],
@@ -132,7 +137,7 @@ class FirstViewController: UIViewController, CropViewControllerDelegate {
                 "title": "iPad Pro (12.9-inch) App"
             ],
             "AppStore":[
-                "original":1024,
+                "original":1024.0,
                 "x":[1],
                 "title": "App Store"
             ],
@@ -141,19 +146,19 @@ class FirstViewController: UIViewController, CropViewControllerDelegate {
         var sizes:Array<CGFloat> = []
         for (_, item) in appicon {
             let x:Array<Int> = item["x"] as! Array<Int>
-            let o:CGFloat = CGFloat(item["original"])
+            let o:CGFloat = CGFloat(item["original"] as! Double)
             for i in x {
                 sizes.append(o * CGFloat(i))
             }
         }
-        return sizes
+        return Array(Set(sizes))
     }
     
     //    MARK: CropViewControllerDelegate
     
     func cropViewController(_ controller: CropViewController, didFinishCroppingImage image: UIImage) {
         navController!.dismiss(animated: true, completion:{
-            let images = self.generateSquare(image: image, sizes: [50, 70, 108, 40])
+            let images = self.generateSquare(image: image, sizes: self.getSizes())
             let avc = UIActivityViewController(activityItems: images, applicationActivities: nil)
             self.present(avc, animated: true, completion: nil)
         })

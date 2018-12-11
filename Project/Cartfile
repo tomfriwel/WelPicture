@@ -1,1 +1,2 @@
 github "sprint84/CropViewController" ~> 1.2
+github "ZipArchive/ZipArchive"
