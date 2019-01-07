@@ -31,7 +31,7 @@ class PathManager {
         
     }
     
-    lazy var documentsDirectory:String = ()->String{
+    lazy var documentsDirectory = { () -> String in 
         let paths:Array<String> = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as Array<String>
         return paths[0]
 //            paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

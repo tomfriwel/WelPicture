@@ -26,6 +26,10 @@ class FirstViewController: UIViewController, CropViewControllerDelegate {
         showCrop()
     }
     
+    @IBAction func showInfo(_ sender: Any) {
+        
+    }
+    
     func setupStyle() -> Void {
         //        border
         showView.layer.borderWidth = 1.0

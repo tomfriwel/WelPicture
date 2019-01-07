@@ -25,17 +25,26 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yV6-Y6-ArB">
-                                <rect key="frame" x="164.5" y="273" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="172" y="273" width="31" height="30"/>
+                                <state key="normal" title="crop"/>
                                 <connections>
                                     <action selector="display:" destination="9pv-A4-QxB" eventType="touchUpInside" id="bMQ-85-ejp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLC-rj-eRU">
+                                <rect key="frame" x="172.5" y="318" width="30" height="30"/>
+                                <state key="normal" title="info"/>
+                                <connections>
+                                    <action selector="showInfo:" destination="9pv-A4-QxB" eventType="touchUpInside" id="0GX-4q-Wid"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="mLC-rj-eRU" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="FNL-kU-PFC"/>
                             <constraint firstItem="yV6-Y6-ArB" firstAttribute="top" secondItem="MS1-sw-Vnb" secondAttribute="bottom" constant="20" id="Z3C-bq-laN"/>
                             <constraint firstItem="MS1-sw-Vnb" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="e3z-io-2DE"/>
+                            <constraint firstItem="mLC-rj-eRU" firstAttribute="top" secondItem="yV6-Y6-ArB" secondAttribute="bottom" constant="15" id="eHo-a7-d76"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="MS1-sw-Vnb" secondAttribute="trailing" constant="20" id="k2U-eE-heI"/>
                             <constraint firstItem="yV6-Y6-ArB" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="sA5-ev-fzV"/>
                             <constraint firstItem="MS1-sw-Vnb" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="20" id="xge-X7-GVV"/>
